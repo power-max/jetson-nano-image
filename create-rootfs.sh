@@ -38,11 +38,11 @@ if [ ! "$(ls -A $JETSON_ROOTFS_DIR)" ]; then
   	wget -qO- http://cdimage.ubuntu.com/ubuntu-base/releases/18.04.4/release/ubuntu-base-18.04.5-base-arm64.tar.gz | tar xzvf - -C $JETSON_ROOTFS_DIR > /dev/null
 	printf "[OK]\n"
 else
-	printf "Base image already downloaded"
+	printf "Base image already downloaded\n"
 fi
 
 # Run debootsrap first stage
-printf "Run debootstrap first stage...  "
+printf "Run debootstrap first stage...  \n"
 debootstrap \
         --arch=$ARCH \
         --keyring=/usr/share/keyrings/ubuntu-archive-keyring.gpg \
